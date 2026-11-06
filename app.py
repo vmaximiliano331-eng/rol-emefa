@@ -253,7 +253,7 @@ def generar_pdf_bytes(df_rol):
     pdf.set_font("Arial", "B", 12)
     pdf.cell(277, 5, txt="COLEGIO DEL AIRE", ln=True, align="C")
     pdf.set_font("Arial", "B", 10)
-    pdf.cell(277, 5, txt="ESCUELA MILITAR DE ESPECIALISTAS DE FUERZA AEREA", ln=True, align="C")
+    pdf.cell(277, 5, txt="ESCUELA MILITAR DE ESPECIALISTAS DE FUERZA AÉREA", ln=True, align="C")
     pdf.set_font("Arial", "B", 11)
     pdf.cell(277, 6, txt="ROL DE SERVICIO DE PRACTICAS - 3/ER. ANO MET. (44/A. GEN.)", ln=True, align="C")
     pdf.set_font("Arial", "", 8)
@@ -300,28 +300,28 @@ def generar_pdf_bytes(df_rol):
     pdf.set_text_color(0, 0, 0)
     pdf.set_xy(35, y_inicio)
     pdf.set_font("Arial", "B", 9)
-    pdf.cell(90, 5, "Superviso:", 0, 0, "C")
+    pdf.cell(90, 5, "Elaboró", 0, 0, "C")
     pdf.set_xy(172, y_inicio)
-    pdf.cell(90, 5, "Aprobo:", 0, 0, "C")
+    pdf.cell(90, 5, "Aprobó", 0, 0, "C")
     
     y_grado = y_inicio + 7
     pdf.set_xy(35, y_grado)
     pdf.set_font("Arial", "", 8.5)
-    pdf.cell(90, 5, "Grado: ________________________________", 0, 0, "C")
+    pdf.cell(90, 5, "________________________________", 0, 0, "C")
     pdf.set_xy(172, y_grado)
-    pdf.cell(90, 5, "Grado: ________________________________", 0, 0, "C")
+    pdf.cell(90, 5, "________________________________", 0, 0, "C")
     
     y_nombre = y_grado + 16  
     pdf.set_xy(35, y_nombre)
-    pdf.cell(90, 5, "Nombre: _______________________________", 0, 0, "C")
+    pdf.cell(90, 5, "_______________________________", 0, 0, "C")
     pdf.set_xy(172, y_nombre)
-    pdf.cell(90, 5, "Nombre: _______________________________", 0, 0, "C")
+    pdf.cell(90, 5, "_______________________________", 0, 0, "C")
     
     y_mat = y_nombre + 6
     pdf.set_xy(35, y_mat)
-    pdf.cell(90, 5, "Matricula: _____________________________", 0, 0, "C")
+    pdf.cell(90, 5, "_____________________________", 0, 0, "C")
     pdf.set_xy(172, y_mat)
-    pdf.cell(90, 5, "Matricula: _____________________________", 0, 0, "C")
+    pdf.cell(90, 5, "_____________________________", 0, 0, "C")
 
     return pdf.output(dest='S').encode('latin1')
 
