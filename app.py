@@ -242,7 +242,7 @@ def generar_pdf_bytes(df_rol):
     pdf = FPDF(orientation='L', unit='mm', format='A4')
     pdf.add_page()
     
-    logo_izq = "logo_izquierda.png"
+    logo_izq = "logo_izquierda.jpg"
     if os.path.exists(logo_izq):
         pdf.image(logo_izq, x=15, y=8, w=25)
 
@@ -255,7 +255,7 @@ def generar_pdf_bytes(df_rol):
     pdf.set_font("Arial", "B", 10)
     pdf.cell(277, 5, txt="ESCUELA MILITAR DE ESPECIALISTAS DE FUERZA AÉREA", ln=True, align="C")
     pdf.set_font("Arial", "B", 11)
-    pdf.cell(277, 6, txt="ROL DE SERVICIO DE PRACTICAS - 3/ER. ANO MET. (44/A. GEN.)", ln=True, align="C")
+    pdf.cell(277, 6, txt="ROL DE SERVICIO DE PRACTICAS - 3/ER. AÑO MET. (44/A. GEN.)", ln=True, align="C")
     pdf.set_font("Arial", "", 8)
     pdf.cell(277, 4, txt=f"Emision: {datetime.now().strftime('%d/%m/%Y %H:%M')}", ln=True, align="C")
     pdf.ln(5)
