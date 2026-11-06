@@ -323,7 +323,7 @@ def generar_pdf_bytes(df_rol):
     pdf.set_xy(172, y_mat)
     pdf.cell(90, 5, "Matricula: _____________________________", 0, 0, "C")
 
-    return pdf.output()
+    return pdf.output(dest='S').encode('latin1')
 
 # ==========================================
 # INTERFAZ Y LÓGICA DE CONTROL (STREAMLIT)
